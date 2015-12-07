@@ -25,7 +25,7 @@
 
 
 	function initHeadline() {
-		singleLetters($('.cd-headline.letters').find('.entry'));
+		singleLetters($('.cd-headline.letters').find('b'));
 		animateHeadline($('.cd-headline'));
 	}
 
