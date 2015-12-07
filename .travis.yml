@@ -1,5 +1,8 @@
 language: node_js
 node_js:
-  - "4.1"
+  - '4.1'
 script:
   - npm run deploy
+env:
+  global:
+    - secure: GI2117getNwc24SODGX5mm2j9hkzOHbcG3JXux11jryGc13gF5iYQuDqDmFiZVaSLakUfJFJIHdatwkVYhXnfdeyKM+kMo/xREGM5aWYi5a0Fqz1UZlLdP96u0ENAXZ89mUpRb7g7iWU8g/g8raJ1z7Ng/lScEL9Gyo1lBs9g/m+3cSPw2UAp23BiBy0aV7pW4/tt91UZR6nEtoERDVqcnqOdVhvN8FJTyhq+F4Cb8OH8KHhqra5izAJnG/y/5lcA6EeMFxOBqWxaDfA6CVce6GjNLAtaf5E+c5Jsv3pZbOIG7C6p9SncDG1j3om4jHtRlfyo0I5oLnYfUQWuzvwi3W+zJ9R0x8hDauVkv6HQnKNakAEzibNRfSWKTNc3SOC6VMPFbJRw6jjUmR47EawGukmnc7+MObbNPcHcyadrB4fdA5mrj1kK/PIvUIH3+lUiF9/DWyjhZzmPZZrnuEKtogEi/pBrTzh24qvvUjIEbupVB0WhKpqy1xZvOKaNbElUO27iewET/7w2z4t4WU5Au7L/ol3MjUUkp7OnxHaRnzHtDQI7bQX33CSMsBkQDlg3qk6I8uhKng95rw8y7ePC2z+g+VfIY+mIxzxt6O80kB/DO7CN9b4eXulWYKdC5GrFv1G6MDhjs8pUdXiOGQZ0UIe9CI97ImfzzKWv89FJcI=
