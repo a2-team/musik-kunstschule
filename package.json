@@ -9,6 +9,7 @@
     "build-modernizr": "modernizr -c node_modules/modernizr/lib/config-all.json -d .",
     "start": "gulp dev",
     "build": "gulp build",
+    "testor": "gh-pages --repo https://$GH_TOKEN@github.com/a2-team/musik-kunstschule.git -d build",
     "deploy": "gulp clean && gulp build && gh-pages -d build"
   },
   "repository": {
@@ -31,7 +32,7 @@
   "devDependencies": {
     "del": "^2.2.0",
     "express": "^4.13.3",
-    "gh-pages": "^0.7.0",
+    "gh-pages": "github:timaschew/gh-pages",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-concat": "^2.6.0",
