@@ -9,8 +9,7 @@
     "build-modernizr": "modernizr -c node_modules/modernizr/lib/config-all.json -d .",
     "start": "gulp dev",
     "build": "gulp build",
-    "testor": "gh-pages --repo https://$GH_TOKEN@github.com/a2-team/musik-kunstschule.git -d build",
-    "deploy": "gulp clean && gulp build && gh-pages -d build"
+    "deploy": "gulp clean && gulp build && gh-pages --repo https://$GH_TOKEN@github.com/a2-team/musik-kunstschule.git -d build"
   },
   "repository": {
     "type": "git",
