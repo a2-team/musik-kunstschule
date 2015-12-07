@@ -3,11 +3,13 @@ var concat = require('gulp-concat');
 var runSequence = require('run-sequence');
 var livereload = require('gulp-livereload');
 var rimraf = require('rimraf');
+var static_site = require('gulp-static-site');
+
 /*
  * TOP LEVEL TASKS
  */
 
-var BUILD_SEQUENCE = ['copy-pages', 'copy-images', 'css-vendor', 'css', 'fonts', 'js-vendor', 'js']
+var BUILD_SEQUENCE = ['site', 'copy-images', 'css-vendor', 'css', 'fonts', 'js-vendor', 'js']
 
 gulp.task('dev', function(callback) {
 	runSequence(
@@ -30,13 +32,26 @@ gulp.task('build', function(callback) {
  * LOW LEVEL TASKS
  */
 
-gulp.task('copy-pages', function() {
-	gulp.src([
-	  	'src/**.html'
-	  	])
-  		.pipe(gulp.dest('build'))
-  		.pipe(livereload())
+var paths = {
+    sources: ['src/contents/**','src/templates/**'],
+};
+
+gulp.task('site', function () {
+    gulp.src('src/contents/**/*.md')
+        .pipe(static_site({
+        	baseDir: 'src'
+        }))
+        .pipe(gulp.dest('build/'))
+        .pipe(livereload())
 });
+
+// gulp.task('copy-pages', function() {
+// 	gulp.src([
+// 	  	'src/**.html'
+// 	  	])
+//   		.pipe(gulp.dest('build'))
+//   		.pipe(livereload())
+// });
 
 gulp.task('copy-images', function() {
 	gulp.src([
@@ -94,7 +109,7 @@ gulp.task('clean', function (cb) {
 
 gulp.task('watch', function() {
     livereload.listen()
-    gulp.watch('./src/js/**/*', ['js'])
-    gulp.watch('./src/styles/**/*', ['css'])
-    gulp.watch('./src/index.html', ['copy-pages'])
+    gulp.watch('src/js/**/*', ['js'])
+    gulp.watch('src/styles/**/*', ['css'])
+    gulp.watch(paths.sources, ['site'])
 });

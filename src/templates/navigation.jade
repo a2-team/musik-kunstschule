@@ -1,0 +1,24 @@
+mixin navigation()
+  .nav-wrapper
+    a#logo-container.brand-logo(href='#') Musik- & Kunstschule Wilhelm
+    ul.right.hide-on-med-and-down
+      block
+
+    ul#nav-mobile.side-nav
+      block
+
+    a.button-collapse(href='#', data-activates='nav-mobile')
+      i.mdi-navigation-menu
+
+.navbar-fixed
+  nav#nav_f.default_color(role='navigation')
+    .container
+      +navigation()
+        li
+          a(href='#intro') Hallo
+        li
+          a(href='#work') Angebot
+        li
+          a(href='#team') Lehrer
+        li
+          a(href='#') Impressionen
