@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "true",
-    "postintall": "npm run build-modernizr",
+    "postinstall": "npm run build-modernizr",
     "build-modernizr": "modernizr -c node_modules/modernizr/lib/config-all.json -d .",
     "start": "gulp dev",
     "build": "gulp build",
