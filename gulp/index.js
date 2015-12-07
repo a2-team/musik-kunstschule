@@ -2,14 +2,16 @@ var gulp = require('gulp');
 var concat = require('gulp-concat');
 var runSequence = require('run-sequence');
 var livereload = require('gulp-livereload');
-var del = require('del');
-
+var rimraf = require('rimraf');
 /*
  * TOP LEVEL TASKS
  */
+
+var BUILD_SEQUENCE = ['copy-pages', 'copy-images', 'css-vendor', 'css', 'fonts', 'js-vendor', 'js']
+
 gulp.task('dev', function(callback) {
 	runSequence(
-		'build',
+		BUILD_SEQUENCE,
 		'server',
 		'watch',
 		callback
@@ -19,15 +21,7 @@ gulp.task('dev', function(callback) {
 gulp.task('build', function(callback) {
 	runSequence(
 		'clean',
-		['copy-pages', 'copy-images', 'css-vendor', 'css', 'fonts', 'js-vendor', 'js'],
-		callback
-	);
-});
-
-gulp.task('deploy', function(callback) {
-	runSequence(
-		'build',
-		'gh-pages',
+		BUILD_SEQUENCE,
 		callback
 	);
 });
@@ -92,8 +86,10 @@ gulp.task('js', function() {
 	  	.pipe(livereload())
 });
 
-gulp.task('clean', function () {
-	return del(['./build/**/*']);
+gulp.task('clean', function (cb) {
+	rimraf('./build/**/*', function() {
+		cb()
+	});
 });
 
 gulp.task('watch', function() {

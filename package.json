@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test": "true",
     "postintall": "npm run build-modernizr",
     "build-modernizr": "modernizr -c node_modules/modernizr/lib/config-all.json -d .",
     "start": "gulp dev",
     "build": "gulp build",
-    "deploy": "gulp deploy"
+    "deploy": "gulp clean && gulp build && gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -28,11 +29,13 @@
   "devDependencies": {
     "del": "^2.2.0",
     "express": "^4.13.3",
+    "gh-pages": "^0.7.0",
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",
     "gulp-gh-pages": "^0.5.4",
     "gulp-livereload": "^3.8.1",
     "require-dir": "^0.3.0",
+    "rimraf": "^2.4.4",
     "run-sequence": "^1.1.5"
   }
 }
