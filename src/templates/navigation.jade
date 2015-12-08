@@ -1,15 +1,37 @@
+mixin createFlatItems(items)
+  each item in items
+    li
+      if item.sub
+        li
+          span.a=item.name
+        li.divider
+        each subItem in item.sub
+          li.subItem
+            a(href=subItem.link)=subItem.name
+        li.divider
+      else
+        a(href=item.link)=item.name
+
+mixin createItems(items)
+  each item, index in items
+    li
+      if item.sub
+        a.dropdown-button(href='javascript:;' data-activates='dropdown'+index)=item.name
+        ul(id='dropdown'+index).dropdown-content
+          each subItem in item.sub
+            li
+              a(href=subItem.link)=subItem.name
+      else
+        a(href=item.link)=item.name
+
 mixin navigation(menuItems, title)
   .nav-wrapper
     a#logo-container.brand-logo(href='#')=title
     ul.right.hide-on-med-and-down
-      each item in menuItems
-        li
-          a(href=item.link)=item.name
+      +createItems(menuItems)
 
     ul#nav-mobile.side-nav
-      each item in menuItems
-        li
-          a(href=item.link)=item.name
+      +createFlatItems(menuItems)
 
     a.button-collapse(href='#', data-activates='nav-mobile')
       i.mdi-navigation-menu

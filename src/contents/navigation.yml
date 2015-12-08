@@ -1,14 +1,33 @@
 title: Musik- & Kunstschule Wilhelm
+indexLink: 'index.html'
 items:
   -
-    name: Hallo
+    name: Intro
     link: 'index.html#intro'
   -
     name: Angebot
-    link: 'index.html#work'
-  -
-    name: Lehrer
-    link: 'index.html#team'
+    link: 'index.html#unterricht'
   -
     name: Impressionen
     link: 'impressionen.html'
+  -
+    name: 'Über Uns'
+    sub:
+      -
+        name: Leitbild
+        link: 'index.html#leitbild'
+      -
+        name: 'Lehrer'
+        link: 'index.html#lehrer'
+      -
+        name: 'Geschichte'
+        link: 'index.html#geschichte'
+      -
+        name: 'Gebäude'
+        link: 'index.html#gebaeude'
+      -
+        name: 'Anfahrt'
+        link: 'index.html#anfahrt'
+  -
+    name: Kontakt
+    link: 'index.html#kontakt'
