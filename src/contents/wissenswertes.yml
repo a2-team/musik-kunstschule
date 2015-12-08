@@ -1,0 +1,25 @@
+headline: Wissenswertes
+subheadline: |
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    <span>Phasellus</span>
+    vestibulum lorem risus, nec suscipit lorem
+    <span>laoreet quis.</span>
+parts:
+  -
+    headline: Speeds up development1
+    text: |
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+        Aenean commodo ligula eget dolor. Cum sociis natoque penatibus
+        et magnis dis parturient montes.
+  -
+    headline: User Experience Focused2
+    text: |
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+        Aenean commodo ligula eget dolor. Cum sociis natoque penatibus
+        et magnis dis parturient montes.
+  -
+    headline: Fully responsive3
+    text: |
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+        Aenean commodo ligula eget dolor. Cum sociis natoque penatibus
+        et magnis dis parturient montes.

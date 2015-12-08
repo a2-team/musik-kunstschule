@@ -1,0 +1,33 @@
+headline: Angebot
+cardsMore: Info
+cards:
+  -
+    title: Keyboard
+    img: img/project1.jpg
+    link: '#keyboard'
+    details: Here is some more information about this project that is only revealed once clicked on.
+  -
+    title: Saxophon
+    img: img/project2.jpeg
+    link: '#saxophon'
+    details: Here is some more information about this project that is only revealed once clicked on.
+  -
+    title: Gitarre
+    img: img/project3.png
+    link: '#gitarre'
+    details: Here is some more information about this project that is only revealed once clicked on.
+  -
+    title: Schlagzeug
+    img: img/project4.jpg
+    link: '#schlagzeug'
+    details: Here is some more information about this project that is only revealed once clicked on.
+  -
+    title: Klavier
+    img: img/project5.png
+    link: '#klavier'
+    details: Here is some more information about this project that is only revealed once clicked on.
+  -
+    title: Geige
+    img: img/project6.jpeg
+    link: '#geige'
+    details: Here is some more information about this project that is only revealed once clicked on.

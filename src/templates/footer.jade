@@ -2,24 +2,7 @@ footer#contact.page-footer.default_color.scrollspy
   .container
     .row
       .col.l6.s12
-        form.col.s12(action='#form-action', method='get')
-          .row
-            .input-field.col.s6
-              i.mdi-action-account-circle.prefix.white-text
-              input#icon_prefix.validate.white-text(name='name', type='text')
-              label.white-text(for='icon_prefix') Name
-            .input-field.col.s6
-              i.mdi-communication-email.prefix.white-text
-              input#icon_email.validate.white-text(name='email', type='email')
-              label.white-text(for='icon_email') Email
-            .input-field.col.s12
-              i.mdi-editor-mode-edit.prefix.white-text
-              textarea#icon_prefix2.materialize-textarea.white-text(name='message')
-              label.white-text(for='icon_prefix2') Nachricht
-            .col.offset-s7.s5
-              button.btn.waves-effect.waves-light.red.darken-1(type='submit')
-                | Abschicken
-                i.mdi-content-send.right.white-text
+        include form
       .col.l3.s12
         ul
           // SPACE

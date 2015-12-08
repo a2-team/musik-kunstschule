@@ -1,0 +1,14 @@
+title: Musik- & Kunstschule Wilhelm
+items:
+  -
+    name: Hallo
+    link: 'index.html#intro'
+  -
+    name: Angebot
+    link: 'index.html#work'
+  -
+    name: Lehrer
+    link: 'index.html#team'
+  -
+    name: Impressionen
+    link: 'impressionen.html'

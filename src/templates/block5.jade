@@ -1,48 +1,20 @@
+mixin createCards(teachers)
+  each teacher in teachers
+    .col.s12.m3
+      .card.card-avatar
+        .waves-effect.waves-block.waves-light
+          img.activator(src=teacher.img)
+        .card-content
+          span.card-title.activator.grey-text.text-darken-4
+            =teacher.name
+            br
+            small
+              em
+                a.red-text.text-darken-1(href=teacher.link)=teacher.details
+
+- $ = locals.contents.lehrer
 #team.section.scrollspy
   .container
-    h2.header.text_b  Unsere Lehrer
+    h2.header.text_b=$.headline
     .row
-      .col.s12.m3
-        .card.card-avatar
-          .waves-effect.waves-block.waves-light
-            img.activator(src='img/avatar2.png')
-          .card-content
-            span.card-title.activator.grey-text.text-darken-4
-              | Valentina Wilhelm
-              br
-              small
-                em
-                  a.red-text.text-darken-1(href='#') Inhaberin und Klavier
-      .col.s12.m3
-        .card.card-avatar
-          .waves-effect.waves-block.waves-light
-            img.activator(src='img/avatar1.png')
-          .card-content
-            span.card-title.activator.grey-text.text-darken-4
-              | Igor Wilhelm
-              br
-              small
-                em
-                  a.red-text.text-darken-1(href='#') Keyboard und Blasinstrumente
-      .col.s12.m3
-        .card.card-avatar
-          .waves-effect.waves-block.waves-light
-            img.activator(src='img/avatar2.png')
-          .card-content
-            span.card-title.activator.grey-text.text-darken-4
-              | Jantina von Hagen
-              br
-              small
-                em
-                  a.red-text.text-darken-1(href='#') Gitarre und Früherziehung
-      .col.s12.m3
-        .card.card-avatar
-          .waves-effect.waves-block.waves-light
-            img.activator(src='img/avatar4.png')
-          .card-content
-            span.card-title.activator.grey-text.text-darken-4
-              | Menno Aden
-              br
-              small
-                em
-                  a.red-text.text-darken-1(href='#') Gitarre
+      +createCards($.teachers)

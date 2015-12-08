@@ -1,0 +1,20 @@
+- $ = locals.contents.formular
+
+form.col.s12(action='#form-action', method='get')
+  .row
+    .input-field.col.s6
+      i.mdi-action-account-circle.prefix.white-text
+      input#icon_prefix.validate.white-text(name='name', type='text')
+      label.white-text(for='icon_prefix')=$.name
+    .input-field.col.s6
+      i.mdi-communication-email.prefix.white-text
+      input#icon_email.validate.white-text(name='email', type='email')
+      label.white-text(for='icon_email')=$.email
+    .input-field.col.s12
+      i.mdi-editor-mode-edit.prefix.white-text
+      textarea#icon_prefix2.materialize-textarea.white-text(name='message')
+      label.white-text(for='icon_prefix2')=$.message
+    .col.offset-s7.s5
+      button.btn.waves-effect.waves-light.red.darken-1(type='submit')
+        =$.submit
+        i.mdi-content-send.right.white-text

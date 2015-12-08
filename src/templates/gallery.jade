@@ -1,0 +1,19 @@
+mixin gallery(images)
+  each image in images
+    li
+      img(src=image.src)
+      div(class=['caption', image.alignment + '-align'])
+        h3=image.head
+        h5=image.sub
+
+
+extends base
+
+block main
+  - $ = locals.contents.impressionen
+  .slider.fullscreen
+    ul.slides
+      +gallery($)
+
+block footer
+  // omit the footer

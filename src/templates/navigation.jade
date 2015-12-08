@@ -1,24 +1,21 @@
-mixin navigation()
+mixin navigation(menuItems, title)
   .nav-wrapper
-    a#logo-container.brand-logo(href='#') Musik- & Kunstschule Wilhelm
+    a#logo-container.brand-logo(href='#')=title
     ul.right.hide-on-med-and-down
-      block
+      each item in menuItems
+        li
+          a(href=item.link)=item.name
 
     ul#nav-mobile.side-nav
-      block
+      each item in menuItems
+        li
+          a(href=item.link)=item.name
 
     a.button-collapse(href='#', data-activates='nav-mobile')
       i.mdi-navigation-menu
 
+- $ = locals.contents.navigation
 .navbar-fixed
   nav#nav_f.default_color(role='navigation')
     .container
-      +navigation()
-        li
-          a(href='#intro') Hej
-        li
-          a(href='#work') Angebot
-        li
-          a(href='#team') Lehrer
-        li
-          a(href='#') Impressionen
+      +navigation($.items, $.title)

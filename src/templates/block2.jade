@@ -1,28 +1,16 @@
+mixin row(parts)
+  each part in parts
+    .col.s12.m4.l4
+      .center.promo.promo-example
+        i.mdi-image-flash-on
+        h5.promo-caption=part.headline
+        p.light.center=part.text
+
+- $ = locals.contents.wissenswertes
 #intro.section.scrollspy
   .container
-    h2.header.text_b Wissenswertes
+    h2.header.text_b=$.headline
     .row
       .col.s12
-        h2.center.header.text_h2
-          | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          span.span_h2  Phasellus
-          | vestibulum lorem risus, nec suscipit lorem
-          span.span_h2  laoreet quis.
-      .col.s12.m4.l4
-        .center.promo.promo-example
-          i.mdi-image-flash-on
-          h5.promo-caption Speeds up development
-          p.light.center
-            | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Cum sociis natoque penatibus et magnis dis parturient montes.
-      .col.s12.m4.l4
-        .center.promo.promo-example
-          i.mdi-social-group
-          h5.promo-caption User Experience Focused
-          p.light.center
-            | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-      .col.s12.m4.l4
-        .center.promo.promo-example
-          i.mdi-hardware-desktop-windows
-          h5.promo-caption Fully responsive
-          p.light.center
-            | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+        h2.center.header.text_h2!=$.subheadline
+      +row($.parts)

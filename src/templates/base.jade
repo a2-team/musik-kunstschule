@@ -1,0 +1,30 @@
+- $ = locals.contents.navigation
+
+doctype html
+html(lang='en')
+  head
+    meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1.0')
+    title=$.title
+    // CSS
+    link(href='css/materialize.css', type='text/css', rel='stylesheet', media='screen,projection')
+    link(href='css/styles.css', type='text/css', rel='stylesheet', media='screen,projection')
+  body#top.scrollspy
+    // Pre Loader
+    #loader-wrapper
+      #loader
+      .loader-section.section-left
+      .loader-section.section-right
+
+    block navigation
+        // Navigation
+        include navigation
+
+    block main
+
+    block footer
+        // Footer
+        include footer
+
+    script(src='js/vendor.js')
+    script(src='js/init.js')

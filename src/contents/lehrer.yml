@@ -1,0 +1,22 @@
+headline: Unsere Lehrer
+teachers:
+  -
+    name: Valentina Wilhelm
+    img: img/avatar2.png
+    details: Inhaberin und Klavier
+    link: '#'
+  -
+    name: Igor Wilhelm
+    img: img/avatar1.png
+    details: Keyboard und Blasinstrumente
+    link: '#'
+  -
+    name: Jantina von Hagen
+    img: img/avatar2.png
+    details: Gitarre und Früherziehung
+    link: '#'
+  -
+    name: Menno Aden
+    img: img/avatar4.png
+    details: Gitarre
+    link: '#'

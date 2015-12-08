@@ -1,100 +1,24 @@
+mixin createCards(cards, more)
+  each card in cards
+    .col.s12.m4.l4
+      .card
+        .card-image.waves-effect.waves-block.waves-light
+          img.activator(src=card.img)
+        .card-content
+          span.card-title.activator.grey-text.text-darken-4
+            =card.title
+            i.mdi-navigation-more-vert.right
+          p
+            a(href=card.link)=more
+        .card-reveal
+          span.card-title.grey-text.text-darken-4
+            =card.title
+            i.mdi-navigation-close.right
+          p=card.details
+
+- $ = locals.contents.angebot
 #work.section.scrollspy
   .container
-    h2.header.text_b Angebot
+    h2.header.text_b=$.headline
     .row
-      .col.s12.m4.l4
-        .card
-          .card-image.waves-effect.waves-block.waves-light
-            img.activator(src='img/project1.jpg')
-          .card-content
-            span.card-title.activator.grey-text.text-darken-4
-              | Keyboard
-              i.mdi-navigation-more-vert.right
-            p
-              a(href='#') Info
-          .card-reveal
-            span.card-title.grey-text.text-darken-4
-              | Keyboard
-              i.mdi-navigation-close.right
-            p
-              | Here is some more information about this project that is only revealed once clicked on.
-      .col.s12.m4.l4
-        .card
-          .card-image.waves-effect.waves-block.waves-light
-            img.activator(src='img/project2.jpeg')
-          .card-content
-            span.card-title.activator.grey-text.text-darken-4
-              | Project Title
-              i.mdi-navigation-more-vert.right
-            p
-              a(href='#') Project link
-          .card-reveal
-            span.card-title.grey-text.text-darken-4
-              | Project Title
-              i.mdi-navigation-close.right
-            p
-              | Here is some more information about this project that is only revealed once clicked on.
-      .col.s12.m4.l4
-        .card
-          .card-image.waves-effect.waves-block.waves-light
-            img.activator(src='img/project3.png')
-          .card-content
-            span.card-title.activator.grey-text.text-darken-4
-              | Project Title
-              i.mdi-navigation-more-vert.right
-            p
-              a(href='#') Project link
-          .card-reveal
-            span.card-title.grey-text.text-darken-4
-              | Project Title
-              i.mdi-navigation-close.right
-            p
-              | Here is some more information about this project that is only revealed once clicked on.
-      .col.s12.m4.l4
-        .card
-          .card-image.waves-effect.waves-block.waves-light
-            img.activator(src='img/project4.jpg')
-          .card-content
-            span.card-title.activator.grey-text.text-darken-4
-              | Project Title
-              i.mdi-navigation-more-vert.right
-            p
-              a(href='#') Project link
-          .card-reveal
-            span.card-title.grey-text.text-darken-4
-              | Project Title
-              i.mdi-navigation-close.right
-            p
-              | Here is some more information about this project that is only revealed once clicked on.
-      .col.s12.m4.l4
-        .card
-          .card-image.waves-effect.waves-block.waves-light
-            img.activator(src='img/project5.png')
-          .card-content
-            span.card-title.activator.grey-text.text-darken-4
-              | Project Title
-              i.mdi-navigation-more-vert.right
-            p
-              a(href='#') Project link
-          .card-reveal
-            span.card-title.grey-text.text-darken-4
-              | Project Title
-              i.mdi-navigation-close.right
-            p
-              | Here is some more information about this project that is only revealed once clicked on.
-      .col.s12.m4.l4
-        .card
-          .card-image.waves-effect.waves-block.waves-light
-            img.activator(src='img/project6.jpeg')
-          .card-content
-            span.card-title.activator.grey-text.text-darken-4
-              | Project Title
-              i.mdi-navigation-more-vert.right
-            p
-              a(href='#') Project link
-          .card-reveal
-            span.card-title.grey-text.text-darken-4
-              | Project Title
-              i.mdi-navigation-close.right
-            p
-              | Here is some more information about this project that is only revealed once clicked on.
+      +createCards($.cards, $.cardsMore)
