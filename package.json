@@ -9,6 +9,7 @@
     "build-modernizr": "modernizr -c node_modules/modernizr/lib/config-all.json -d .",
     "start": "gulp dev",
     "build": "gulp build",
+    "manual-deploy": "gulp clean && gulp build && gh-pages -d build",
     "deploy": "gulp clean && gulp build && ./deploy.sh"
   },
   "repository": {
