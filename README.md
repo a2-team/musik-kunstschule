@@ -6,7 +6,7 @@
 
 # Lokal einrichten
 - Repository klonen
-- Im Terminal: `npm i` zum
+- Im Terminal: `npm i` zum installieren der benötigten Node.js Module
 
 # Lokale Entwicklung
 - im Terminal: `npm start` und offen lassen für file watching
